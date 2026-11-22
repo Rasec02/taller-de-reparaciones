@@ -78,4 +78,3 @@ curl -X DELETE $API/ordenes/records/ID
 
 Rutas (`react-router`): `/` resumen por etapa · `/ordenes` lista con filtro (`?estado=`) y búsqueda por cliente/teléfono/equipo · `/ordenes/nueva` recibir equipo (con hasta 3 fotos) · `/ordenes/:id` detalle (parámetro de ruta): datos, fotos, presupuesto, siguiente paso e historial · `*` página 404. `Layout` es el diseño anidado con `<Outlet />`.
 
-Notas para la defensa: `useEffect` (con limpieza que aborta la petición) está en `hooks/useDatos.js`; `useRef` se usa para el `<input type="file">` y para los ids de las filas de piezas; `useMemo` en el resumen y en el filtro de la lista (recorren la lista completa); `useCallback` en el cargador del detalle porque es dependencia de un efecto.
